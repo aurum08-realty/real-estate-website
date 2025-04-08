@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <title>Real Estate Website</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 40px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+    }
+    .property-card {
+      width: 300px;
+      border: 1px solid #eee;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      background-color: #fff;
+    }
+    .property-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+    .property-info {
+      padding: 15px;
+    }
+    .property-info h3 {
+      margin: 10px 0 5px;
+    }
+    .property-info .location {
+      color: #9e6c3c;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .features {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+      display: flex;
+      justify-content: space-between;
+      font-size: 14px;
+      color: #555;
+    }
+    .review-btn {
+      background-color: #9e6c3c;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      width: 100%;
+      cursor: pointer;
+      border-radius: 3px;
+    }
+    .review-btn:hover {
+      background-color: #814e25;
+    }
+    .for-sale {
+      position: absolute;
+      background: #9e6c3c;
+      color: #fff;
+      padding: 4px 10px;
+      top: 10px;
+      left: 10px;
+      font-size: 13px;
+      border-radius: 3px;
+    }
+    .price-tag {
+      position: absolute;
+      background: white;
+      color: #9e6c3c;
+      bottom: 10px;
+      left: 10px;
+      padding: 5px 10px;
+      font-weight: bold;
+    }
+    .card-image-wrapper {
+      position: relative;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">Aurum Realty</div>
+    <nav class="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Properties.html">Properties</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+  <section class="container">
+    <div class="property-card">
+      <div class="card-image-wrapper">
+        <span class="for-sale">FOR SALE</span>
+        <img src="./real images/Property 1.jpg" alt="House 1">
+        <div class="price-tag">R16 945 679</div>
+      </div>
+      <div class="property-info">
+        <h3>Villa in Cape Town</h3>
+        <p class="location">Clifton Rd 45, Cape Town</p>
+        <p>Ocean views and premium finishes.</p>
+        <ul class="features">
+          <li>🛏 6</li>
+          <li>🛁 6</li>
+          <span><i class="fa fa-expand"></i> 345 sqm</span>
+        </ul>
+        <button class="review-btn" onclick="scrollToTeam()">Arrange Review</button>
+      </div>
+    </div>
+    <div class="property-card">
+      <div class="card-image-wrapper">
+        <span class="for-sale">FOR SALE</span>
+        <img src="./real images/Property 2.jpeg" alt="House 2">
+        <div class="price-tag">R9 200 000</div>
+      </div>
+      <div class="property-info">
+        <h3>Modern House in Durban</h3>
+        <p class="location">Beachfront Ave, Durban</p>
+        <p>Ocean views and premium finishes.</p>
+        <ul class="features">
+          <li>🛏 8</li>
+          <li>🛁 6</li>
+          <span><i class="fa fa-expand"></i> 400 sqm</span>
+        </ul>
+        <button class="review-btn" onclick="scrollToTeam()">Arrange Review</button>
+      </div>
+    </div>
+    <div class="property-card">
+      <div class="card-image-wrapper">
+        <span class="for-sale">FOR SALE</span>
+        <img src="./real images/Propert 3.jpeg" alt="House 3">
+        <div class="price-tag">R880 000</div>
+      </div>
+      <div class="property-info">
+        <h3>Townhouse in Johannesburg</h3>
+        <p class="location">Rosebank Lane, JHB</p>
+        <p>Peaceful escape in the heart of the city.</p>
+        <ul class="features">
+          <li>🛏 5</li>
+          <li>🛁 3</li>
+          <span><i class="fa fa-expand"></i> 315 sqm</span>
+        </ul>
+        <button class="review-btn" onclick="scrollToTeam()">Arrange Review</button>
+      </div>
+    </div>
+    
+    <div class="property-card">
+      <div class="card-image-wrapper">
+        <span class="for-sale">FOR RENTAL</span>
+        <img src="./real images/Property 4.jpeg" alt="House 4">
+        <div class="price-tag">R20 690</div>
+      </div>
+      <div class="property-info">
+        <h3>Penthouse in Sandton</h3>
+        <p class="location">85 Katherine Street, Sandton, 2196 Johannesburg, Gauteng</p>
+        <p>Enjoy luxury living in the heart of the city.</p>
+        <ul class="features">
+          <li>🛏 4</li>
+          <li>🛁 3</li>
+          <span><i class="fa fa-expand"></i> 103 sqm</span>
+        </ul>
+        <button class="review-btn" onclick="scrollToTeam()">Arrange Review</button>
+      </div>
+    </div>
+    
+    <div class="property-card">
+      <div class="card-image-wrapper">
+        <span class="for-sale">FOR RENTAL</span>
+        <img src="./real images/Property 5.jpg" alt="House 5">
+        <div class="price-tag">R15 009</div>
+      </div>
+      <div class="property-info">
+        <h3>Apartment in Bantry Bay</h3>
+        <p class="location">Clifton Rd 44, Cape Town</p>
+        <p>Enjoy luxury living in the heart of the city.</p>
+        <ul class="features">
+          <li>🛏 3</li>
+          <li>🛁 3</li>
+          <span><i class="fa fa-expand"></i> 110 sqm</span>
+        </ul>
+        <button class="review-btn" onclick="scrollToTeam()">Arrange Review</button>
+      </div>
+    </div>
+    
+    <div class="property-card">
+      <div class="card-image-wrapper">
+        <span class="for-sale">FOR SALE</span>
+        <img src="./real images/Property 6.jpeg" alt="House 6">
+        <div class="price-tag">R2 400 500</div>
+      </div>
+      <div class="property-info">
+        <h3>Town-house in Hermanus</h3>
+        <p class="location">79 End Street,Hermanus</p>
+        <p>Enjoy luxury living in the heart of the city.</p>
+        <ul class="features">
+          <li>🛏 4</li>
+          <li>🛁 3</li>
+          <span><i class="fa fa-expand"></i> 130 sqm</span>
+        </ul>
+        <button class="review-btn" onclick="scrollToTeam()">Arrange Review</button>
+      </div>
+    </div>
+    
+    <div class="property-card">
+      <div class="card-image-wrapper">
+        <span class="for-sale">FOR RENTAL</span>
+        <img src="./real images/Property 7.jpg" alt="House 7">
+        <div class="price-tag">R2 400</div>
+      </div>
+      <div class="property-info">
+        <h3>Holiday Cottage in Port Elizabeth</h3>
+        <p class="location">Freedom Rd 45, Port Elizabeth</p>
+        <p>Experience next-level sophistication.</p>
+        <ul class="features">
+          <li>🛏 4</li>
+          <li>🛁 3</li>
+          <span><i class="fa fa-expand"></i>  130 sqm </span>
+        </ul>
+        <button class="review-btn" onclick="scrollToTeam()">Arrange Review</button>
+      </div>
+    </div>
+    
+    <div class="property-card">
+      <div class="card-image-wrapper">
+        <span class="for-sale">FOR SALE</span>
+        <img src="./real images/Property 8.jpeg" alt="House 8">
+        <div class="price-tag">R945 679</div>
+      </div>
+      <div class="property-info">
+        <h3> Green Villa in Cape Town</h3>
+        <p class="location">Mandela Rd , Cape Town</p>
+        <p>Chic spaces with timeless charm.</p>
+        <ul class="features">
+          <li>🛏 3</li>
+          <li>🛁 3</li>
+          <span><i class="fa fa-expand"></i> 300 sqm</span>
+        </ul>
+        <button class="review-btn" onclick="scrollToTeam()">Arrange Review</button>
+      </div>
+    </div>
+    
+    <div class="property-card">
+      <div class="card-image-wrapper">
+        <span class="for-sale">FOR RENTAL</span>
+        <img src="./real images/Property 9.jpeg" alt="House 9">
+        <div class="price-tag">R6 550</div>
+      </div>
+      <div class="property-info">
+        <h3>Apartment in Franschhoek</h3>
+        <p class="location">12 De Wet St,Franschhoek, Western Cape, South Africa</p>
+        <p>Exclusive living in prime location.</p>
+        <ul class="features">
+          <li>🛏 3</li>
+          <li>🛁 2</li>
+          <span><i class="fa fa-expand"></i> 115 sqm</span>
+        </ul>
+        <button class="review-btn" onclick="scrollToTeam()">Arrange Review</button>
+      </div>
+    </div>
+    
+    <div class="property-card">
+      <div class="card-image-wrapper">
+        <span class="for-sale">FOR SALE</span>
+        <img src="./real images/Property 10.jpeg" alt="House 10">
+        <div class="price-tag">R50 000 500</div>
+      </div>
+      <div class="property-info">
+        <h3>Modern house in Clifton</h3>
+        <p class="location">Clifton, Cape Town</p>
+        <p>Sun-drenched rooms and open plan</p>
+        <ul class="features">
+          <li>🛏 7</li>
+          <li>🛁 5</li>
+          <span><i class="fa fa-expand"></i> 2,192 sqm</span>
+        </ul>
+        <button class="review-btn" onclick="scrollToTeam()">Arrange Review</button>
+      </div>
+    </div>
+    
+    <div class="property-card">
+      <div class="card-image-wrapper">
+        <span class="for-sale">FOR SALE</span>
+        <img src="./real images/Property 11.jpg" alt="House 1">
+        <div class="price-tag">R90 845 660</div>
+      </div>
+      <div class="property-info">
+        <h3>Luxury home in KZN</h3>
+        <p class="location">Durban, KwaZulu</p>
+        <p>Tranquil retreat with modern edge.</p>
+        <ul class="features">
+          <li>🛏 6</li>
+          <li>🛁 4</li>
+          <span><i class="fa fa-expand"></i>  2670 sqm</span>
+        </ul>
+        <button class="review-btn" onclick="scrollToTeam()">Arrange Review</button>
+      </div>
+    </div>
+    
+    <div class="property-card">
+      <div class="card-image-wrapper">
+        <span class="for-sale">FOR SALE</span>
+        <img src="./real images/Property 12.webp" alt="House 12">
+        <div class="price-tag">R12 600 900</div>
+      </div>
+      <div class="property-info">
+        <h3>Modern home in Bantry Bay</h3>
+        <p class="location">Durban, Cape Town</p>
+        <p>Unmatched beauty and privacy.</p>
+        <ul class="features">
+          <li>🛏 4</li>
+          <li>🛁 3</li>
+          <span><i class="fa fa-expand"></i> 1600 sqm</span>
+        </ul>
+        <button class="review-btn" onclick="scrollToTeam()">Arrange Review</button>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function scrollToTeam() {
+      window.location.href = 'about.html#team';
+    }
+  </script>
+<footer class="footer" style="margin-top: 60px;">
+  <div>
+      <h3>ABOUT US</h3>
+      <img src="./real images/footer-about.jpg" alt="Modern House">
+      <p>Turning dreams into reality – we help you find not just a house, but a place you’ll proudly call home.</p>
+      <div class="logo-footer">Aurum Realty</div>
+  </div>
+  <div>
+      <h3>HOURS</h3>
+      <div class="hours-info">
+          <p>Monday - Friday: 09 AM - 19 PM</p>
+          <p>Saturday: 09 AM - 14 PM</p>
+          <p>Sunday: Closed</p>
+          <p>Phone: +27 69 855 1628</p>
+          <p>Email: aurumrealty@gmail.com</p>
+          <p>Address: 62 Menton Rd Richmond,Johannesburg,2092</p>
+      </div>
+  </div>
+  <div>
+      <h3>USEFUL LINKS</h3>
+      <a href="index.html">Home</a>
+      <a href="Properties.html">Properties</a>
+      <a href="Blog.html">Blog</a>
+      <a href="About.html">About Us</a>
+      <a href="Contact.html">Contact</a>
+  </div>
+  <div>
+      <h3>FEATURED PROPERTIES</h3>
+      <img src="./real images/footer-featured.jpg" alt="Featured Property">
+  </div>
+</footer>
+</body>
+</html>

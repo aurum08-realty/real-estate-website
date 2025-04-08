@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Real Estate Website</title>
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f5f5;
+        }
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 650px;
+            overflow: hidden;
+        }
+        
+        .slider img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transition: opacity 2s ease-in-out;
+        }
+        
+        .slider img.active {
+            opacity: 1;
+        }
+        
+        .slider-text {
+            position: absolute;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            text-align: left;
+            font-size: 50px;
+            font-weight: bold;
+            color: white;
+        }
+        
+        .slider-text span {
+            display: block;
+        }
+        
+        .slider-text .highlight {
+            color: #8b5e3b;
+            font-size: 50px;
+            margin-left:30px;
+        }
+        .search-title {
+            background: #8b5e3b;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            width: 450px;
+            margin: 30px auto 10px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom:10px;
+        }
+        .search-box {
+            background: white;
+            padding: 20px;
+            margin: -50px auto 20px;
+            width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            margin-top: 60px;
+        }
+        
+        .search-box form {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: space-between;
+        }
+        
+        .search-box input,
+        .search-box select {
+            padding: 10px;
+            width: calc(25% - 10px);
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .search-box button {
+            background: #8b5e3b;
+            color: white;
+            border: none;
+            padding: 10px 480px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">Aurum Realty</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Properties.html">Properties</a></li>
+                <li><a href="Blog.html">Blog</a></li>
+                <li><a href="About.html">About Us</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="slider">
+        <img src="./real images/Slider 1.jpg" class="active" alt="Image 1">
+        <img src="./real images/Slider 2.jpg" alt="Image 2">
+        <img src="./real images/Slider 3.jpg" alt="Image 3">
+        <img src="./real images/Slider 4.jpg" alt="Image 4">
+        <img src="./real images/Slider 5.jpg" alt="Image 5">
+        <div class="slider-text">
+            <span>ELEVATE YOUR LIFESTYLE<br> AND HOME WITH </span>
+            <span class="highlight">- AURUM REALTY</span>
+        </div>
+    </div>
+    <div class="search-title">Search Your Home</div>
+    <div class="search-box">
+        <form>
+            <select id="city">
+                <option>All Cities</option>
+                <option>Cape Town</option>
+                <option>Johannesburg</option>
+                <option>Durban</option>
+                <option>Pretoria</option>
+                <option>Port Elizabeth</option>
+                <option>Franschhoek</option>
+                <option>Hermanus</option>
+                <option>Sandton</option>
+                <option>Clifton</option>
+                <option>Bantry Bay</option>
+            </select>
+            <select>
+                <option>All Offers</option>
+                <option>100%</option>
+                <option>75%</option>
+                <option>50%</option>
+                <option>25%</option>
+                <option>10%</option>
+            </select>
+            <select id="bedrooms">
+                <option>Bedrooms</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5+</option>
+            </select>
+            <select>
+                <option>Bathrooms</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5+</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+       
+    </div>
+    <div class="featured-title">Featured Listing</div>
+    <div class="property-container">
+        <div class="property-card">
+            <div class="property-image">
+                <img src="./real images/Featured 1.webp" >
+                <span class="for-sale">FOR SALE</span>
+                <span class="price">R25 000 000</span>
+            </div>
+            <div class="property-details">
+                <h3>Gauteng Sandton</h3>
+                <p><i class="fa fa-map-marker-alt"></i> 82A Boundary Rd, Illovo,2196</p>
+                <p class="description">Embodiment of opulence, this majestic residence showcases exceptional 
+                    architecture and interior design. Nestled in a prime, secure location, this intelligent design 
+                    harmoniously balances entertainment and seclusion, prioritizing tranquility and exclusivity.</p>
+                <div class="property-features">
+                    <span><i class="fa fa-bath"></i> 2</span>
+                    <span><i class="fa fa-bed"></i> 2</span>
+                    <span><i class="fa fa-expand"></i> 1,050 sqm</span>
+                </div>
+                <a href="About.html#team" class="review-btn">Arrange a Review</a>
+            </div>
+
+        </div>
+
+        <div class="property-card">
+            <div class="property-image">
+                <img src="./real images/Featured 2.webp" >
+                <span class="for-sale">FOR SALE</span>
+                <span class="price">R38 000 000</span>
+            </div>
+            <div class="property-details">
+                <h3>Western Cape,Cape Town</h3>
+                <p><i class="fa fa-map-marker-alt"></i> Cape Town ,Stonehurst Mountain Estate</p>
+                <p class="description">Experience luxury living in this stunning residence, featuring landscape,swimming pool,
+                    fireplace,fitness center,private gated entrance and fire pit.
+                </p>
+                <div class="property-features">
+                    <span><i class="fa fa-bath"></i> 4</span>
+                    <span><i class="fa fa-bed"></i> 7</span>
+                    <span><i class="fa fa-expand"></i>179 sqm</span>
+                </div>
+                <a href="About.html#team" class="review-btn">Arrange a Review</a>
+            </div>
+        </div>
+
+        <div class="property-card">
+            <div class="property-image">
+                <img src="./real images/Featured 3.webp">
+                <span class="for-sale">FOR SALE</span>
+                <span class="price">R9 900 560</span>
+            </div>
+            <div class="property-details">
+                <h3>KwaZulu Natal</h3>
+                <p><i class="fa fa-map-marker-alt"></i> 70 Westridge Road, Umhlanga,</p>
+                <p class="description">Ideal for families seeking luxury and relaxation,
+                     this stunning estate features multiple residences, exceptional amenities, 
+                     and a peaceful, secure environment, perfect for those who value comfort, leisure, and sophistication.</p>
+                <div class="property-features">
+                    <span><i class="fa fa-bath"></i> 8</span>
+                    <span><i class="fa fa-bed"></i> 8</span>
+                    <span><i class="fa fa-expand"></i> 2,192 sqm</span>
+                </div>
+                <a href="About.html#team" class="review-btn">Arrange a Review</a>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="property-image">
+                <img src="./real images/Featured 4.webp">
+                <span class="for-sale">FOR SALE</span>
+                <span class="price">R7 560 780</span>
+            </div>
+            <div class="property-details">
+                <h3>Western Cape,Hermanus</h3>
+                <p><i class="fa fa-map-marker-alt"></i>17 Theron Street, Hermanus, Western Cape</p>
+                <p class="description">Designed with entertainment in mind, this stunning single-level home is perfect for
+                     families who love hosting friends and family. </p>
+                <div class="property-features">
+                    <span><i class="fa fa-bath"></i> 6</span>
+                    <span><i class="fa fa-bed"></i> 8</span>
+                    <span><i class="fa fa-expand"></i> 2,639 sqm</span>
+                </div>
+                <a href="About.html#team" class="review-btn">Arrange a Review</a>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="property-image">
+                <img src="./real images/Featured 5.webp" >
+                <span class="for-sale">FOR SALE</span>
+                <span class="price">R11 700 000</span>
+            </div>
+            <div class="property-details">
+                <h3>Gauteng,Pretoria</h3>
+                <p><i class="fa fa-map-marker-alt"></i> 10 Nature's Valley, The Willows, 22 Lakeside Boulevard</p>
+                <p class="description">The natural light and open plan design of this architect styled home , ensure a wonderful living experience. </p>
+                <div class="property-features">
+                    <span><i class="fa fa-bath"></i> 2</span>
+                    <span><i class="fa fa-bed"></i> 2</span>
+                    <span><i class="fa fa-expand"></i> 120 sq ft</span>
+                </div>
+                <a href="About.html#team" class="review-btn">Arrange a Review</a>
+            </div>
+        </div>
+        <div class="property-card">
+            <div class="property-image">
+                <img src="./real images/Featured 6.webp" >
+                <span class="for-sale">FOR SALE</span>
+                <span class="price">R3 999 999,99</span>
+            </div>
+            <div class="property-details">
+                <h3>Eastern Cape</h3>
+                <p><i class="fa fa-map-marker-alt"></i>34 Biko Street, Mbadlana, Eastern Cape</p>
+                <p class="description">This exquisite penthouse embodies sophistication and exclusivity, 
+                    offering a luxurious coastal lifestyle</p>
+                <div class="property-features">
+                    <span><i class="fa fa-bath"></i> 4</span>
+                    <span><i class="fa fa-bed"></i> 4</span>
+                    <span><i class="fa fa-expand"></i> 120 sq ft</span>
+                </div>
+                <a href="About.html#team" class="review-btn">Arrange a Review</a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <script>
+        let index = 0;
+        const slides = document.querySelectorAll('.slider img');
+        
+        function changeSlide() {
+            slides[index].classList.remove('active');
+            index = (index + 1) % slides.length;
+            slides[index].classList.add('active');
+        }
+        
+        setInterval(changeSlide, 4000);
+    </script>
+  <section style="padding: 60px 20px; text-align: center; background-color: #f9f9f9;">
+    <h2 style="font-size: 36px; margin-bottom: 10px;">Testimonies</h2>
+    <div style="width: 240px; height: 4px; background-color: #8b5e3b; margin: 0 auto 40px auto;"></div>
+  
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px;">
+      
+      <div style="width: 250px;">
+        <img src="./real images/testimony 1.jpg" alt="Client 1" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+        <h4 style="margin: 10px 0 5px;">Nomsa Dlamini</h4>
+        <p style="font-size: 14px; color: #444;">"Aurum Realty helped us find our dream home with zero stress!"</p>
+      </div>
+  
+      <div style="width: 250px;">
+        <img src="./real images/testimony 5.jpg" alt="Client 2" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+        <h4 style="margin: 10px 0 5px;">Thabo Mokoena</h4>
+        <p style="font-size: 14px; color: #444;">"The team was professional, friendly, and extremely helpful!"</p>
+      </div>
+  
+      <div style="width: 250px;">
+        <img src="./real images/testimony 2.jpg" alt="Client 3" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+        <h4 style="margin: 10px 0 5px;">Karabo Sithole</h4>
+        <p style="font-size: 14px; color: #444;">"Fast service, great listings, and amazing follow-up."</p>
+      </div>
+  
+      <div style="width: 250px;">
+        <img src="./real images/testimony 3.jpg" alt="Client 4" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+        <h4 style="margin: 10px 0 5px;">Lebohang Moloi</h4>
+        <p style="font-size: 14px; color: #444;">"I’m so happy I trusted Aurum Realty. They really care!"</p>
+      </div>
+
+      <div style="width: 250px;">
+        <img src="./real images/testimony 6.jpg" alt="Client 5" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+        <h4 style="margin: 10px 0 5px;">Sipho Ngwenya</h4>
+        <p style="font-size: 14px; color: #444;">"Super smooth process from viewing to ownership."</p>
+      </div>
+  
+      <div style="width: 250px;">
+        <img src="./real images/testimony 4.jpg" alt="Client 6" style="width: 100px; height: 100px; border-radius: 50%; object-fit: cover;">
+        <h4 style="margin: 10px 0 5px;">Zanele Khumalo</h4>
+        <p style="font-size: 14px; color: #444;">"They treated me like family. Best experience ever!"</p>
+      </div>
+    </div>
+  </section>
+  
+  <footer class="footer" style="margin-top: 60px;">
+    <div>
+        <h3>ABOUT US</h3>
+        <img src="./real images/footer-about.jpg" alt="Modern House">
+        <p>Turning dreams into reality – we help you find not just a house, but a place you’ll proudly call home.</p>
+        <div class="logo-footer">Aurum Realty</div>
+    </div>
+    <div>
+        <h3>HOURS</h3>
+        <div class="hours-info">
+            <p>Monday - Friday: 09 AM - 19 PM</p>
+            <p>Saturday: 09 AM - 14 PM</p>
+            <p>Sunday: Closed</p>
+            <p>Phone: +27 69 855 1628</p>
+            <p>Email: aurumrealty@gmail.com</p>
+            <p>Address: 62 Menton Rd Richmond,Johannesburg,2092</p>
+        </div>
+    </div>
+    <div>
+        <h3>USEFUL LINKS</h3>
+        <a href="index.html">Home</a>
+        <a href="Properties.html">Properties</a>
+        <a href="Blog.html">Blog</a>
+        <a href="About.html">About Us</a>
+        <a href="Contact.html">Contact</a>
+    </div>
+    <div>
+        <h3>FEATURED PROPERTIES</h3>
+        <img src="./real images/footer-featured.jpg" alt="Featured Property">
+    </div>
+  </footer>  
+</body>
+</html>
